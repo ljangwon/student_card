@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Student Dashboard</title>
+
+		<link
+			href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.datatables.net/keytable/2.6.1/css/keyTable.dataTables.min.css"
+			rel="stylesheet"
+		/>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"
+		></script>
+
+		<script
+			type="text/javascript"
+			src="https://cdn.datatables.net/keytable/2.6.1/js/dataTables.keyTable.min.js"
+		></script>
+
+		<link rel="stylesheet" href="css/main.css" />
+		<script src="js/main.js" defer></script>
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				display_count_st_master();
+
+				let st_id = location.hash.substr(2);
+
+				display_st_master('st_master');
+				if (st_id) {
+					display_st_info(st_id);
+				} else {
+					$('#study_history').hide();
+					$('#test_history').hide();
+				}
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="count"></div>
+
+		<form id="form1">
+			<div>
+				<input id="st_name" value="홍길동" type="text" />
+				<input type="submit" value="생성" />
+			</div>
+		</form>
+		<form id="form2">
+			<div>
+				<input type="submit" value="삭제" />
+			</div>
+		</form>
+
+		<script>
+			$('#form1').submit(function (event) {
+				let st_name = $('#st_name').val();
+				if (st_name) {
+					$.ajax({
+						url: `model/st_master/new_row.php`,
+						method: 'POST',
+						data: { name: st_name },
+						cache: false,
+						async: false,
+					}).done(function (result) {
+						if (result == 'ok') {
+						}
+					});
+				}
+			});
+			$('#form2').submit(function (event) {
+				$.ajax({
+					url: `model/st_master/delete_rows.php`,
+					cache: false,
+					async: false,
+				}).done(function (result) {
+					if (result == 'ok') {
+						$('#input_result').text(`<br> new data is deleted <br> `);
+					}
+				});
+			});
+		</script>
+
+		<div id="st_master_title"></div>
+		<table id="st_master" class="display nowrap" style="width: 100%">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Grade1</th>
+					<th>Grade2</th>
+					<th>Name</th>
+					<th>Status</th>
+					<th>House</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th>Id</th>
+					<th>Grade1</th>
+					<th>Grade2</th>
+					<th>Name</th>
+					<th>Status</th>
+					<th>House</th>
+				</tr>
+			</tfoot>
+		</table>
+		<div id="st_master_result"></div>
+
+		<div id="study_history_title"></div>
+		<button id="btn_new_study_history" value="new">추가</button>
+		<div id="btn_new_study_history_result"></div>
+
+		<table id="study_history" class="display nowrap" style="width: 100%">
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>st_Id</th>
+					<th>course</th>
+					<th>memo</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th>id</th>
+					<th>st_Id</th>
+					<th>course</th>
+					<th>memo</th>
+				</tr>
+			</tfoot>
+		</table>
+
+		<div id="study_history_result"></div>
+
+		<div id="test_history_title"></div>
+		<button id="btn_new_test_history" value="new">추가</button>
+		<div id="btn_new_test_history_result"></div>
+
+		<table id="test_history" class="display nowrap" style="width: 100%">
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>st_Id</th>
+					<th>course</th>
+					<th>memo</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th>id</th>
+					<th>st_Id</th>
+					<th>course</th>
+					<th>memo</th>
+				</tr>
+			</tfoot>
+		</table>
+
+		<div id="test_history_result"></div>
+	</body>
+</html>

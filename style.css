@@ -1,0 +1,150 @@
+:root {
+    --text-color: #f0f4f5;
+    --background-color: #263343;
+    --accent-color: #d49466;
+
+    /* color */
+    --color-black: #3f454d;
+    --color-white: #ffffff;
+    --color-blue: #3b88c3;
+    --color-yellow: #fbbe28;
+    --color-pink: #fd7f84;
+    --color-light-grey: #dfdfdf;
+
+    /* size */
+    --size-button: 60px;
+    --font-size: 18px;
+    --base-space: 8px;
+    --size-border: 4px;
+    --size-thumbnail: 50px;
+
+    /* animation */
+    --ani-duration: 300ms;
+}
+
+body {
+    margin: 0;
+    font-family: "Source Sans Pro"
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbar {
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    background-color:var(--background-color);
+    padding: 8px 12px;
+}
+
+.navbar__logo {
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.navbar__logo i {
+    color: var(--accent-color);
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar__menu li {
+    padding: 8px 12px;
+}
+
+.navbar__menu li:hover {
+    background-color:var(--accent-color);
+    border-radius: 4px;
+}
+
+.navbar__icons {
+    list-style: none;
+    color: var(--text-color);
+    display: flex;
+    padding-left: 0;
+}
+
+.navbar__icons li {
+    padding: 8px 12px;
+}
+
+.navbar__toggleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color:var(--accent-color);
+}
+
+.items {
+  background-color: var(--color-black);
+  width: 60%;
+  list-style: none;
+  padding-left: 0;
+  overflow-y: scroll;
+}
+
+.item {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: var(--base-space);
+    margin-bottom: var(--base-space);
+  }
+
+.students__list {
+    list-style-type: none;
+}
+  
+@media screen and (max-width: 760px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar__menu {
+        display: none;
+        flex-direction: column;
+        align-items:flex-end;
+        width: 100%;
+  
+    }
+
+    .navbar__menu li {
+        width: 100%;
+        text-align: center;        
+    }
+
+    .navbar__menu li a {
+        color: black;
+    }
+
+    .navbar__icons {
+        display: none;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .navbar__icons a {
+        color: black;
+    }
+
+    .navbar__toggleBtn {
+        display: flex;
+        position: absolute;
+        right: 32px;
+    }
+
+    .navbar__menu.active,
+    .navbar__icons.active {
+        display: flex;
+    }
+}

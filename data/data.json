@@ -1,0 +1,100 @@
+{
+    "students": [
+        {
+            "num": 1,
+            "grade1": "H",
+            "grade2": 2,
+            "name": "허영은"
+        },
+        {
+            "num": 2,
+            "grade1": "H",
+            "grade2": 2,
+            "name": "신예원"
+        },
+        {
+            "num": 3,
+            "grade1": "M",
+            "grade2": 3,
+            "name": "신재원"
+        },
+        {
+            "num": 4,
+            "grade1": "M",
+            "grade2": 3,
+            "name": "이수현"
+        },
+        {
+            "num": 5,
+            "grade1": "M",
+            "grade2": 3,
+            "name": "이민준"
+        },
+        {
+            "num": 6,
+            "grade1": "M",
+            "grade2": 3,
+            "name": "김희선"
+        },
+        {
+            "num": 7,
+            "grade1": "M",
+            "grade2": 2,
+            "name": "신하영"
+        },
+        {
+            "num": 8,
+            "grade1": "M",
+            "grade2": 2,
+            "name": "박재환"
+        },
+        {
+            "num": 9,
+            "grade1": "M",
+            "grade2": 2,
+            "name": "유원찬"
+        },
+        {
+            "num": 10,
+            "grade1": "M",
+            "grade2": 2,
+            "name": "조연우"
+        },
+        {
+            "num": 11,
+            "grade1": "M",
+            "grade2": 2,
+            "name": "김지수"
+        },
+        {
+            "num": 12,
+            "grade1": "M",
+            "grade2": 2,
+            "name": "이예린"
+        },
+        {
+            "num": 13,
+            "grade1": "M",
+            "grade2": 1,
+            "name": "최준용"
+        },
+        {
+            "num": 14,
+            "grade1": "E",
+            "grade2": 6,
+            "name": "김재하"
+        },
+        {
+            "num": 15,
+            "grade1": "E",
+            "grade2": 5,
+            "name": "차은수"
+        },
+        {
+            "num": 16,
+            "grade1": "E",
+            "grade2": 3,
+            "name": "박시현"
+        }
+    ]
+}

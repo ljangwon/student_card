@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>LEAN MATH</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+		<script src="src/main.js" defer></script>
+	</head>
+
+	<body>
+		<header>
+			<nav class="navbar">
+				<div class="navbar__logo">
+					<i class="fab fa-leanpub"></i>
+					<a href="index.html">Lean Math</a>
+				</div>
+
+				<ul class="navbar__menu">
+					<button class="btn menuBtn menu1" data-key="menu" data-value="1">첫화면</button>
+					<button class="btn menuBtn menu2" data-key="menu" data-value="2">학생조회</button>
+					<button class="btn menuBtn menu3" data-key="menu" data-value="3">학습자료실</button>
+					<button class="btn menuBtn menu4" data-key="menu" data-value="4">수업안내</button>
+					<button class="btn menuBtn menu5" data-key="menu" data-value="5">상담예약</button>
+				</ul>
+
+				<ul class="navbar__icons">
+					<li>
+						<a href="http://jakeleanco.ipdisk.co.kr:8000/leanmath/st_master.html"
+							><i class="fas fa-phone-square"></i
+						></a>
+					</li>
+					<li>
+						<a href="#"><i class="fas fa-envelope-square"></i></a>
+					</li>
+				</ul>
+
+				<a href="#" class="navbar__toggleBtn"> <i class="fas fa-bars"></i></a>
+			</nav>
+		</header>
+		<main id="main_board">
+			<!-- search option -->
+			<ul class="students__option">
+				<!-- Buttons -->
+				<div class="buttons">
+					<button class="btn stdBtn A" data-key="grade1" data-value="A">전체</button>
+					<button class="btn stdBtn H" data-key="grade1" data-value="초등">초등</button>
+					<button class="btn stdBtn M" data-key="grade1" data-value="중등">중둥</button>
+					<button class="btn stdBtn E" data-key="grade1" data-value="고등">고등</button>
+				</div>
+
+				<!-- 
+            <label for="grade_A">전체 </label>
+            <input class="input__radio" type="radio" id="grade_A" name="grade1" value="A" checked>
+            <label for="grade_H">고등 </label>
+            <input class="input__radio" type="radio" id="grade_H" name="grade1" value="H">
+            <label for="grade_M">중등 </label>
+            <input class="input__radio" type="radio" id="grade_M" name="grade1" value="M">
+            <label for="grade_E">초등 </label>
+            <input class="input__radio" type="radio" id="grade_E" name="grade1" value="E">
+            -->
+			</ul>
+			<!-- students__list -->
+			<ul class="students__list"></ul>
+			<span id="st__dashboard"> </span>
+		</main>
+	</body>
+</html>

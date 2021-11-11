@@ -1,0 +1,117 @@
+{
+	"g_code": [
+		{
+			"code": "1000",
+			"key_map": [
+				{
+					"num": 1,
+					"key": "Q1",
+					"value": "연산 속도/정확도 수준"
+				},
+				{
+					"num": 2,
+					"key": "Q2",
+					"value": "연산 기술 명료성 수준"
+				},
+				{
+					"num": 3,
+					"key": "Q3",
+					"value": "채점 및 오답정리 수준"
+				},
+				{
+					"num": 4,
+					"key": "Q4",
+					"value": "일반문제 이해력 수준"
+				},
+				{
+					"num": 5,
+					"key": "Q5",
+					"value": "문장제 문제 이해력 수준"
+				},
+				{
+					"num": 6,
+					"key": "Q6",
+					"value": "풀이 과정 논리적 기술 수준"
+				},
+				{
+					"num": 7,
+					"key": "Q7",
+					"value": "창의 사고력(추론) 수준"
+				},
+				{
+					"num": 8,
+					"key": "Q8",
+					"value": "기하 관찰력 수준"
+				},
+				{
+					"num": 9,
+					"key": "Q9",
+					"value": "연습장 활용 수준"
+				},
+				{
+					"num": 10,
+					"key": "Q10",
+					"value": "학습태도(성실) 수준"
+				}
+			]
+		},
+		{
+			"code": "0000",
+			"key_map": [
+				{
+					"num": 1,
+					"key": "Menu1",
+					"value": "인적사항"
+				},
+				{
+					"num": 2,
+					"key": "Menu2",
+					"value": "역량평가서"
+				}
+			]
+		}
+	],
+
+	"l_code": [
+		{
+			"code": "2000",
+			"key_map": [
+				{
+					"num": 1,
+					"key": "section1",
+					"value": "학습이력"
+				},
+				{
+					"num": 2,
+					"key": "section2",
+					"value": "교재이력"
+				},
+				{
+					"num": 3,
+					"key": "section3",
+					"value": "평가이력"
+				}
+			]
+		},
+		{
+			"code": "3000",
+			"key_map": [
+				{
+					"num": 1,
+					"key": "bgcolor",
+					"value": ""
+				},
+				{
+					"num": 2,
+					"key": "textcolor",
+					"value": ""
+				},
+				{
+					"num": 3,
+					"key": "strongcolor",
+					"value": ""
+				}
+			]
+		}
+	]
+}
